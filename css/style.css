@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+button {
+    padding: 10px;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.header {
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 5px solid silver;
+    padding: 10px 0;
+}
+.main {
+    padding-top: 50px;
+}
+
+.products {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.product {
+    padding: 10px;
+    border: 1px solid silver;
+    width: calc((100% - 4 * 2 * 5px) / 4);
+    margin: 5px;
+}
+.product__img {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 205px;
+}
+.product__img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: top center;
+}
+.product__title {
+    margin-bottom: 10px;
+}
+.product__price-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-popup {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart-popup__content-block {
+    position: relative;
+    background: #f3f3f3;
+    padding: 20px;
+    min-width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart-popup__content {
+    font-size: 30px;
+}
+
+.cart-prod-list-header {
+    background: grey;
+    color: white;
+    font-weight: bold;
+    display: flex;
+}
+.cart-prod-list-header__item {
+    margin-right: 10px;
+}
+
+.cart-prod-list {
+    border-bottom: 3px solid silver;;
+}
+.cart-prod {
+    display: flex;
+    align-items: center;
+}
+.cart-prod__info {
+    display: flex;
+    align-items: center;
+}
+
+.cart-prod__item {
+    margin-right: 10px;
+}
+.cart-item-number {
+    min-width: 40px;
+}
+.cart-item-title {
+    min-width: 200px;
+}
+.cart-item-count {
+    min-width: 80px;
+}
+.cart-item-price {
+    min-width: 100px;
+}
+.cart-item-total {
+    min-width: 100px;
+    font-weight: bold;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    border-radius: 50%;
+    transition: background .3s;
+    cursor: pointer;
+}
+.close-btn:hover {
+    background: rgba(255, 255, 255, .8);
+}
